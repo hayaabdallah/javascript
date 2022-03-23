@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+
+        }
+    </style>
+</head>
+
+
+
+
+<body>
+    <form name="controls">
+        <select name="imageList" onchange="displayImage(this);">
+            <option value="pictures/slide_5.jpg">select country</option>
+            <option value="pictures/spain.jpg">spain</option>
+            <option value="pictures/italy.jpg">italy</option>
+            <option value="pictures/jordan.jpg">jordan</option>
+            <option value="pictures/turkey.jpg">turkey</option>
+        </select>
+    </form>
+
+    <img id="canvas" src="pictures/slide_5.jpg" />
+    <script type="text/javascript">
+        function displayImage(elem) {
+            var image = document.getElementById("canvas");
+            image.src = elem.value;
+        }
+    </script>
+
+</body>
+
+</html>

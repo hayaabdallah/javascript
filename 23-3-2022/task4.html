@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width: 350px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <select id="font" onchange="fontchange(this)">
+        <option value="Arial">Arial</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Times">Times</option>
+    </select>
+
+    <select id="size" onchange="sizechange(this)">
+        <option value="12px">12px</option>
+        <option value="5px">5px</option>
+        <option value="10px">10px</option>
+        <option value="20px">20px</option>
+    </select>
+
+    <label>italic</label>
+    <input type="checkbox" id="italic" value="italic" onchange="stylechange(this)">
+
+    <label>bold</label>
+    <input type="checkbox" id="bold"  value="bold" onchange="weightchange(this)">
+
+    <label>underline</label>
+    <input type="checkbox" id="underline" value="underline" onchange="changedecoration(this)">
+    </br>
+    </br>
+
+    <div id="demo">the quick brown fox jumps over the lazy dog</div>
+
+   <script>
+    function fontchange()
+     {
+       let x=document.getElementById("font").value;
+       document.getElementById("demo").style.fontFamily=x;
+
+     }
+
+    function sizechange()
+    {
+      let result=document.getElementById("size").value;
+      document.getElementById("demo").style.fontSize=result;
+
+    }
+
+    function stylechange()
+    {
+
+      let y=document.getElementById("italic").value;
+      document.getElementById("demo").style.fontStyle=y;
+
+    }
+
+
+    function weightchange()
+    {
+     let z=document.getElementById("bold").value;
+     document.getElementById("demo").style.fontWeight=z;
+
+    }
+   
+    function changedecoration()
+    {
+      let a=document.getElementById("underline").value;
+      document.getElementById("demo").style.textDecoration=a;
+
+    }
+
+   </script>
+
+
+</body>
+
+</html>

@@ -154,6 +154,7 @@ from the first number to the second number
 Ex: muti2(4, 5); => 4 * 5 => 20
 Ex: muti2(3, 6); => 3 * 4 * 5 * 6 => 360
 */
+
 function muti2(a,b)
 {
    

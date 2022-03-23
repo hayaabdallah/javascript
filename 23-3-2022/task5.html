@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #lesss {
+            color: red;
+            display: inline;
+        }
+        #p2
+        {
+            color:red;
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="pass1">Password(min 6 characters):</label>
+    <input type="password" id="pass1" onchange="less(this.value)">
+    <p id="lesss"></p>
+    </br>
+    </br>
+    <label for="pass2">repeat password:</label>
+    <input type="password" id="pass2" onchange="same(this.value)">
+    <p id="p2"></p>
+    <br/><br/>
+    <button id="btn" value="Submit" style="display: none;">Submit</button>
+    <script>
+        function less(num) {
+            if (num.length < 6)
+                document.getElementById("lesss").innerHTML = "Too Short";
+                else{
+                document.getElementById('lesss').innerHTML = ''
+            }
+        }
+
+       
+        function same(num1)
+        {
+            let x=document.getElementById("pass1").value;
+           if(num1!=x|| num1.length < 6 && num1.length > 0)
+           {
+              document.getElementById("p2").innerHTML="the two password don't match";}
+              else 
+              {
+                
+                document.getElementById('btn').style.display = 'block';
+                document.getElementById('p2').innerHTML = "";
+                document.getElementById('lesss').innerHTML = '';
+
+              }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
