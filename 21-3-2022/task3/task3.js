@@ -81,19 +81,19 @@ Ex: sum2(4, 5); => 4 + 5 => 9
 Ex: sum2(3, 6); => 3 + 4 + 5 + 6 => 18
 */
 
-function sum2(num1 , num2){
+function sum2(num1, num2) {
     result = 0;
     i = 0;
 
     let min = num1;
     let max = num2;
 
-    if(min > num2){
+    if (min > num2) {
         min = num2;
         max = num1;
     }
     i = min;
-    while(i <= max){
+    while (i <= max) {
         result = result + i;
         i++;
     }
@@ -101,7 +101,7 @@ function sum2(num1 , num2){
 }
 
 
-console.log(sum2(3,6));
+console.log(sum2(3, 6));
 
 /*
 5
@@ -114,7 +114,22 @@ and return the first string number time
 Ex: repeatStr2("ro","cc"); => "ro ro"
 Ex: repeatStr2("ro","fff"); => "ro ro ro"
 */
-
+function repeatStr2(string1, string2) {
+    if ((string1 !== "") & (string2 !== "")) {
+        result = [];
+        i = 0;
+        number = string2.length;
+        while (i < number) {
+            result[i] = string1 + " ";
+            i++;
+        }
+        return result;
+    } else {
+        result = "The string is empty";
+        return result;
+    }
+}
+document.write(`${repeatStr2("ro", "fff")} <br> `);
 
 
 
@@ -130,18 +145,16 @@ Ex: multiOf(6,3,2); => 54
 Ex: multiOf(6,2,3); => 48
 */
 
-function multiOf(num1,num2,num3)
-
-{
+function multiOf(num1, num2, num3) {
     let i = 0;
     result = 1;
-    while(i>num3){
+    while (i > num3) {
 
-    
-       result=result*num2;
-       i++;
+
+        result = result * num2;
+        i++;
     }
-    return result*num1;
+    return result * num1;
 }
 
 
@@ -155,10 +168,9 @@ Ex: muti2(4, 5); => 4 * 5 => 20
 Ex: muti2(3, 6); => 3 * 4 * 5 * 6 => 360
 */
 
-function muti2(a,b)
-{
-   
-   
+function muti2(a, b) {
+
+
 
 }
 
@@ -174,6 +186,9 @@ and return the number between them
 numberBetweenUs(2,8) => "3, 4, 5, 6, 7"
 numberBetweenUs(1,3) => "2"
 */
+
+
+
 
 
 /*
@@ -196,6 +211,8 @@ countDown(7)
 
 
 
+
+
 /*
 10
 Write a function called multiplication2
@@ -206,11 +223,10 @@ multiplication2(5,4) => 20
 multiplication2(2,8) => 16
 multiplication2(7,6) =>  42
 */
-function multiplication2(a,b)
-{
-  for(i=0;i<b;i++)
-    a=+a;
-  return a;
+function multiplication2(a, b) {
+    for (i = 0; i < b; i++)
+        a = +a;
+    return a;
 
 }
 
@@ -225,14 +241,16 @@ mod2(2,8) => 2
 mod2(7,4) => 3
 mod2(8,4) => 0
 */
-function mod2(a,b)
-{
+function mod2(n1, n2) {
 
-var md=b*1+a;
-return md;
-
+    let result = 0;
+    if (n1 < n2)
+        result = n1;
+    else
+        result = n1 - Math.floor(n1 / n2) * n2;
+    return result;
 }
-
+console.log(mod2(5, 4));
 
 /*
 12
@@ -248,16 +266,14 @@ repeatChar("school","a") => 0
 repeatChar("School","s") => 1
 try more case by yourself
 */
-function repeatChar(str,c)
-{
-var count=0;
-for(i=0;i<str.length;i++)
-  {
-    if(str[i]==c)
-      count++;
+function repeatChar(str, c) {
+    var count = 0;
+    for (i = 0; i < str.length; i++) {
+        if (str[i] == c)
+            count++;
 
-  }
-return count;
+    }
+    return count;
 }
 
 
