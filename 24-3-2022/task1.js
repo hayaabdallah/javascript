@@ -26,15 +26,25 @@ var persons = [
 ];
 
 
-function firstName(persons) {
-    let arr = [];
-    for (i = 0; i < 5; i++) {
-        console.log(this.persons[i].name.first);
-    }
+
+
+function firstName(persons)
+{
+ 
+  let arr3=[];
+  for(i=0;i<persons.length;i++)
+  {
+    arr3[i]= persons[i].name.first;
+
+
+  }
+
+return arr3;
 
 }
 
-firstName(persons);
+console.log(firstName(persons));
+
 
 /*
 3
@@ -47,19 +57,21 @@ Ex: averageAge(persons) => 41.2
 */
 
 
-function averageAge(persons) {
+let sum=0;
+function averageAge(persons)
+{
 
-    let sum = 0;
-    let index = 0;
-    for (i = 0; i < 5; i++) {
-        sum += this.persons[i].age;
-        index++;
-    }
-    console.log(sum / index);
+  for(i=0;i<persons.length;i++)
+  {
+
+    sum+=persons[i].age;
+  }
+return sum/persons.length;
 
 }
 
-averageAge(persons);
+console.log(averageAge(persons));
+
 
 /*
 4
@@ -89,6 +101,8 @@ console.log(p[index].name.first+ " "+p[index].name.last);
 }
 
 olderPerson(persons);
+
+
 
 /*
 5
@@ -170,7 +184,21 @@ Ex: repeatWord("My name is alex mercer class name B baba mama hello Hello HELLO"
 }
 */
 
+function repeatWord(string)
+{
+   let str=string.toLowerCase().split(" ")
+   let obj={};
+   for(i=0;i<str.length;i++)
+   {
+      if(obj[str[i]]==undefined)
+        obj[str[i]]=1;
+        else
+        obj[str[i]]++;
+   }
+  return obj;
+}
 
+console.log(repeatWord("My name is alex mercer class name B baba mama hello Hello HELLO"));
 
 /*
 8
@@ -184,6 +212,25 @@ Ex: repeatChar("mamababatetacedo")
 => { m:2,  a:5, b:2, t2:, e:2, c:1, d:1, o:1}
 */
 
+
+function repeatChar(string)
+{
+    let wor=string.split("");
+    let ob={};
+    for(i=0;i<wor.length;i++)
+    {
+
+      if(ob[wor[i]]==undefined)
+         ob[wor[i]]=1;
+         else
+         ob[wor[i]]++;
+
+    }
+
+return ob;
+}
+
+console.log(repeatChar("mamababatetacedo"));
 
 /*
 9
