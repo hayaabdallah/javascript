@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mainForm {
+            display: flex;
+        }
+
+        #card {
+            border: 1px solid rgb(36, 34, 34);
+            width: 600px;
+        }
+
+        #card img {
+            width: 400px;
+            height: 200px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-right: 400px;
+        }
+
+
+        input[type=submit] {
+            margin-top: 20px;
+        }
+
+        #language {
+            display: flex;
+
+        }
+        #card{
+            text-align: center;
+            padding: 5px;
+            display: none;
+        }
+
+  
+  
+    </style>
+</head>
+
+<body>
+    <div id="mainform">
+    <form>
+        <label>Full Name:</label>
+        <input type="text" id="name">
+        </br> </br>
+
+        <label>Age:</label>
+        <input type="number" id="Age">
+        </br> </br>
+
+        <label>Gender:</label>
+        <div>
+            <input type="radio" class="gender" name="gender"> <label>Male</label>
+            <input type="radio" class="gender" name="gender"> <label>Female</label>
+        </div>
+
+        <label>brief desciption:</label>
+        <textarea id="description" rows="10" cols="40"></textarea>
+        </br></br>
+
+        <label>major and university:</label>
+        <input type="text" id="major">
+        </br></br>
+
+        <label>Birth Date:</label>
+        <input type="date" id="birth">
+        </br></br>
+
+        <label>favorite programming languages:</label>
+        <div id="languages">
+            <input type="checkbox" class="lang">
+            <label>Html</label>
+            <input type="checkbox" class="lang">
+            <label>CSS</label>
+            <input type="checkbox" class="lang">
+            <label>javascript</label>
+        </div>
+        </br>
+
+        <label>sibling number:</label>
+        <input type="text" id="sibling">
+        </br>
+
+        <input type="submit" onclick="submit()">
+    </form>
+    <div id="card" >
+        
+        <h3 id="cardname"></h3>
+        <div id="cardage"></div>
+        <div id="cardgender"></div>
+        <div id="cardselfDescription"></div>
+        <div id="cardmajorUn"></div>
+        <div id="cardbd"></div>
+        <div id="cardpl"></div>
+        <div id="cardbrothers"></div>
+
+    </div>
+    
+
+</div>
+    <script src="task1.js"></script>
+</body>
+
+</html>
